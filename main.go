@@ -9,3 +9,18 @@ func generator(limit int, ch chan<- int) {
 	close(ch)
 
 }
+
+
+
+func filter(src <-chan int, dst chan<- int, prime int) {
+
+	for i := range src {
+		if i % prime != 0 {
+			dst <- i
+		}
+ 
+	}
+
+	close(dst)
+
+}
