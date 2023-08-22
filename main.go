@@ -50,3 +50,9 @@ func sieve(limit int) {
 	fmt.Println()
 
 }
+
+func main() {
+
+	sieve(100)
+
+}
